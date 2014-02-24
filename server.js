@@ -44,9 +44,6 @@ server = http.createServer(function server(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     fs.createReadStream(
         __dirname + (~req.url.indexOf('primus.js') ? '/primus.js' : '/index.html')
     ).pipe(res);
@@ -107,3 +104,4 @@ primus.on('connection', function connection(spark) {
 // Everything is ready, listen to a port number to start the server.
 //
 server.listen(process.env.PORT || 8080);
+console.log('listening to: '+ 8080)
