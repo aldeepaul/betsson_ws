@@ -92,6 +92,10 @@ primus.on('connection', function connection(spark) {
         primus.write('Spark: '+spark.id +' asked for a full server kill. Server will be killed within 5 seconds');
         setTimeout(process.exit, 5000);
     });
+
+    setInterval(function(){
+        spark.write("msg: " + Math.random());
+    }, 2000);
 });
 
 //

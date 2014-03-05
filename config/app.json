@@ -1,0 +1,29 @@
+{
+    "default": {
+        "redis_server": "BMAN-PT-RD1",
+        "redis_port": 6379,
+        "node_port": 3000
+    },
+
+    "PT": {
+        "redis_server": "BMAN-PT-RD1",
+        "redis_port": 6379,
+        "node_port": 80
+    },
+
+    "QA": {
+        "redis_server": "BMAN-QA-RD1",
+        "redis_port": 6379,
+        "node_port": 80
+    },
+    "PP": {
+        "redis_server": "",
+        "redis_port": 6379,
+        "node_port": 80
+    },
+    "PRODUCTION": {
+        "redis_server": "",
+        "redis_port": 6379,
+        "node_port": 80
+    }
+}
